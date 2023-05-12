@@ -49,10 +49,10 @@ def getFirstCamera(callback):
         cpp_cam = CppCamera.getFirstCamera()
         if cpp_cam is None:
             return None
-        else:
-            cam = Camera(cpp_cam)
-            cam.connect()
-            return cam
+        cam = Camera(cpp_cam)
+        cam.connect()
+        return cam
+
     _runInComThread(f, callback=callback)
 
 class ErrorLevel:

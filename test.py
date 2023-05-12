@@ -1,7 +1,7 @@
 import edsdk
 
 def pic_taken(filename):
-    print("got picture: " + filename)
+    print(f"got picture: {filename}")
     global cam
     cam.disconnect()
     edsdk.terminate()
@@ -18,7 +18,7 @@ def got_camera(c):
         cam.takePicture("C:\\test.jpg")
 
 def got_name(name):
-    print("Camera name: " + name)
+    print(f"Camera name: {name}")
 
 def err(level, msg):
     print(msg)
